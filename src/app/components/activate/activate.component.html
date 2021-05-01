@@ -1,0 +1,16 @@
+<div class="kukai-card">
+    <H1>
+        Activate your ICO wallet
+    </H1>
+    <p class="description">Wallets created during the fundraiser need to be activated. No private key is required for the activation process.</p>
+    <div class="grey-card">
+      <small class="">Your public key hash</small>
+      <input type="text" class="text" [(ngModel)]="pkh" [placeholder]="'tz1...'">
+      <small class="">Your activation code</small>
+      <input type="text" class="text" [(ngModel)]="secret" [placeholder]="'Code'">
+      <div class="buttons"><a routerLink="/import"><button class="button back">Back</button></a><button class="button next" (click)="activate()">Activate</button></div>
+      <span *ngIf="formInvalid" class="text-danger">
+          {{ formInvalid }}
+      </span>
+    </div>
+</div>
